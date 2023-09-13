@@ -16,7 +16,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 mongoose.connect(process.env.MONGO_URL, () =>
   console.log("connected to MongoDB")
 );
-
+app.get("/",(req,res)=>{
+  res.json("hello");
+});
 app.post("/signup", (req, res) => {
   user.signUp(req, res, bcrypt, saltRounds);
 });
