@@ -65,9 +65,9 @@ function CheckOutComponent({ userId, price, items }) {
 
   return (
     <div className="paymentFormContainer">
-     <p className="error">{error}</p>
       {!success ? (
         <form onSubmit={handleCheckOut} className="paymentForm">
+          <p className="error">{error}</p>
           <fieldset className="FormGroup">
             <div className="formRow">
               <CardElement options={CARD_OPTIONS} />
