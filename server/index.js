@@ -50,4 +50,4 @@ app.get("/get-cart-items/:userId", (req, res) => user.getCartItems(req, res));
 
 // const storeItems = map;
 
-app.listen(8000, () => console.log("listening on port 8000"));
+app.listen(process.env.PORT || 8000, () => console.log("listening on port 8000"));
