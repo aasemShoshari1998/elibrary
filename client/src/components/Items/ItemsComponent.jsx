@@ -31,7 +31,7 @@ function ItemsComponent() {
             marginBottom: "5rem",
           }}
         >
-          What are you waiting for ?, <Link to="/login">Login</Link> now and start buying the best
+          What are you waiting for ? <Link to="/login">Login</Link> now and start buying the best
           products for you or your children's education!
         </h1>
       ) : null}
