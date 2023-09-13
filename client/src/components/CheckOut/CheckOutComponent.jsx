@@ -39,7 +39,7 @@ function CheckOutComponent({ userId, price, items }) {
     if (!error) {
       try {
         const { id } = paymentMethod;
-        const response = await fetch("http://localhost:8000/order", {
+        const response = await fetch("https://elibrary-livid.vercel.app/order", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
