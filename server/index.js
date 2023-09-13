@@ -10,7 +10,10 @@ const user = require("./routes/user");
 const bcrypt = require("bcrypt");
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin:"https://elibrary-szn7.vercel.app/"
+}))
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 mongoose.connect(process.env.MONGO_URL, () =>
