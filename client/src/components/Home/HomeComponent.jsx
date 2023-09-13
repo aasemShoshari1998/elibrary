@@ -5,7 +5,7 @@ function Home() {
   const [categories, setCategories] = useState();
   useEffect(() => {
     const getCategories = async () => {
-      const response = await fetch("http://localhost:8000/get-categories");
+      const response = await fetch("https://elibrary-livid.vercel.app/get-categories");
 
       const data = await response.json();
       setCategories(data);
