@@ -1,0 +1,154 @@
+.shoppingCartContainer {
+  margin-top: 10rem;
+}
+
+.shoppingCartItem {
+  display: flex;
+  align-items: center;
+  gap: 0 5rem;
+  margin-top: 5rem;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.shoppingCartItemInfos {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shoppingCartItemInfos img {
+  min-width: 150px;
+}
+
+.shoppingCartItemInfos .itemName {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+}
+
+.quantity,
+.priceContainer {
+  height: 50px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem 0;
+  font-size: 1.6rem;
+  align-items: center;
+}
+
+.quantityControl,
+.price,
+.quantityTitle,
+.priceTitle {
+  font-size: 2rem;
+}
+.price {
+  color: #15bb0f;
+}
+
+.quantityArrows {
+  cursor: pointer;
+}
+
+.quantityNum {
+  display: inline-flex;
+  text-align: center;
+  width: 20px;
+  justify-content: center;
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+  font-size: 40px !important;
+  width: 30px !important;
+}
+
+.removeFromCartBtn {
+  width: 166px;
+  border: none;
+  background-color: #fcba03;
+  color: #fff;
+  cursor: pointer;
+  padding: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+}
+
+.orderNowBtn {
+  background-color: #584d4d;
+  padding: 1.2rem 2.4rem;
+  color: #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  font-size: 3rem;
+}
+
+.orderNowBtn:hover {
+  background-color: #a07c19 !important;
+}
+
+.orderNow {
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 5rem;
+}
+
+.totalPrice {
+  font-size: 2.4rem;
+}
+
+.emptyCartMessageContainer {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quantityPriceContainer {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 1000px) {
+  .shoppingCartItem {
+    flex-direction: column;
+    width: 50%;
+    gap: 5rem 0;
+  }
+  .shoppingCartContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10rem 0;
+  }
+  .shoppingCartItemInfos {
+    width: 90%;
+  }
+  .quantity,
+  .priceContainer {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 977px) {
+  .shoppingCartItem {
+    width: 100%;
+  }
+  .shoppingCartItemInfos img {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .orderNowBtn,
+  .totalPrice {
+    font-size: 1.2rem;
+  }
+  .quantityPriceContainer {
+    justify-content: space-around;
+  }
+}

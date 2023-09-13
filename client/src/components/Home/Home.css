@@ -1,0 +1,32 @@
+.categoriesContainer {
+  margin-top: 15rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 5rem 0;
+}
+
+.category {
+}
+
+.category img {
+  transition: transform 1s;
+}
+
+.category img:hover {
+  transform: scale(1.05);
+}
+
+.categoryTitle {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .categoryTitle {
+    margin-bottom: 2rem;
+  }
+  html {
+    font-size: 56.25%;
+  }
+}
