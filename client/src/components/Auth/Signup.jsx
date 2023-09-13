@@ -22,7 +22,7 @@ function Signup() {
         username: username.current.value,
         password: password.current.value,
       };
-      await fetch("http://localhost:8000/signup", {
+      await fetch("https://elibrary-livid.vercel.app/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
