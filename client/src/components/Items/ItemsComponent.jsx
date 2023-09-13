@@ -12,7 +12,7 @@ function ItemsComponent() {
   useEffect(() => {
     const getItems = async () => {
       const response = await fetch(
-        `http://localhost:8000/get-products/${category}`
+        `https://elibrary-livid.vercel.app/get-products/${category}`
       );
 
       const data = await response.json();
