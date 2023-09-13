@@ -28,6 +28,7 @@ function CheckOutComponent({ userId, price, items }) {
   const [success, setSuccess] = useState(false);
   const stripe = useStripe();
   const elements = useElements();
+  const [error, setError] = useState("");
 
   const handleCheckOut = async (e) => {
     e.preventDefault();
@@ -57,12 +58,14 @@ function CheckOutComponent({ userId, price, items }) {
         console.log("error", err);
       }
     } else {
-      console.log(error.message);
+       setError(error.message);
+
     }
   };
 
   return (
     <div className="paymentFormContainer">
+     <p className="error">{error}</p>
       {!success ? (
         <form onSubmit={handleCheckOut} className="paymentForm">
           <fieldset className="FormGroup">
