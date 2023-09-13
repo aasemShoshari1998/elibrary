@@ -28,7 +28,7 @@ function ShoppingCartComponent() {
   useEffect(() => {
     const getItems = async () => {
       const response = await fetch(
-        `http://localhost:8000/get-cart-items/${user._id}`
+        `https://elibrary-livid.vercel.app/get-cart-items/${user._id}`
       );
       const data = await response.json();
       setItems(data.reverse());
@@ -44,7 +44,7 @@ function ShoppingCartComponent() {
     );
   }, [orders]);
   const handleCart = async (itemId) => {
-    await fetch(`http://localhost:8000/remove-item-from-cart/${itemId}`, {
+    await fetch(`https://elibrary-livid.vercel.app/remove-item-from-cart/${itemId}`, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -83,7 +83,7 @@ function ShoppingCartComponent() {
 
   // const handleOrder = async () => {
   //   try {
-  //     const response = await fetch("http://localhost:8000/order", {
+  //     const response = await fetch("https://elibrary-livid.vercel.app/order", {
   //       method: "POST",
   //       headers: {
   //         "Content-type": "application/json",
