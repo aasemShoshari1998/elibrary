@@ -11,7 +11,7 @@ const bcrypt = require("bcrypt");
 const app = express();
 
 app.use(cors({
-    origin:"https://elibrary-szn7.vercel.app/"
+    origin:"https://elibrary-szn7.vercel.app"
 }))
 
 app.use(bodyParser.json());
