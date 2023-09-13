@@ -7,7 +7,7 @@ function ItemCard({ item }) {
 
   const handleCart = async (e, itemId) => {
     if (e.target.textContent === "ADD TO CART") {
-      await fetch(`http://localhost:8000/add-item-to-cart/${itemId}`, {
+      await fetch(`https://elibrary-livid.vercel.app/add-item-to-cart/${itemId}`, {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -18,7 +18,7 @@ function ItemCard({ item }) {
       });
       dispatch({ type: "ADD_ITEM_TO_CART", payload: itemId });
     } else {
-      await fetch(`http://localhost:8000/remove-item-from-cart/${itemId}`, {
+      await fetch(`https://elibrary-livid.vercel.app/remove-item-from-cart/${itemId}`, {
         method: "POST",
         headers: {
           "Content-type": "application/json",
