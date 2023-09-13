@@ -16,7 +16,7 @@ app.use(cors({
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-mongoose.connect(process.env.MONGO_URL, () =>
+mongoose.connect("mongodb+srv://aasem:captain10majed@estore.9mxth.mongodb.net/", () =>
   console.log("connected to MongoDB")
 );
 app.get("/",(req,res)=>{
