@@ -43,3 +43,7 @@ input {
 .authLink {
   color: #fcba03;
 }
+.error{
+  color:red;
+  text-align:center;
+}
